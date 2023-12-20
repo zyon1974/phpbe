@@ -1,9 +1,4 @@
 <?php
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
-
-
     if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
         header('Access-Control-Allow-Origin: *');
         header('Access-Control-Allow-Methods: POST, GET, DELETE, PUT, PATCH, OPTIONS');
@@ -40,60 +35,32 @@ switch ($method) {
 }
 
 // Funzioni per manipolare la richiesta
-try{
-  function get() {
-      // $prova = $_GET['pippo'];
-      // echo "Risposta alla richiesta GET $prova\n ";
-      
-      // $qry = $_SERVER['QUERY_STRING'];
 
-      // echo "$qry\n";
+function get() {
+    // $prova = $_GET['pippo'];
+    // echo "Risposta alla richiesta GET $prova\n ";
+    
+    // $qry = $_SERVER['QUERY_STRING'];
 
-      // $info = curl_getinfo($ch);
-      // if ($info != "") {
-      //     echo "header arrivato\n";
-      // } else {
-      //     echo "header perso\n";
-      // };
+    // echo "$qry\n";
 
-      header( "CUSTOM_HEADER: zio canide" );
+    // $info = curl_getinfo($ch);
+    // if ($info != "") {
+    //     echo "header arrivato\n";
+    // } else {
+    //     echo "header perso\n";
+    // };
 
-      $data = array(
-        {
-          "notizie_tecnologia":[
-            {
-              'titolo' => 'FRED',
-              'testo' => 'john@example.com',
-              'foto' => 'foto1.jpg',
-            },
-            {
-              'titolo' => 'FRED',
-              'testo' => 'john@example.com',
-              'foto' => 'foto1.jpg',
-            },
-            {
-              'titolo' => 'FRED',
-              'testo' => 'john@example.com',
-              'foto' => 'foto1.jpg',
-            },
-            {
-              'titolo' => 'FRED',
-              'testo' => 'john@example.com',
-              'foto' => 'foto1.jpg',
-            }
-          ]
-        }
-      );
-      
-      header('Content-Type: application/json');
-      
-      echo json_encode($data);
-  }
-}
+    header( "CUSTOM_HEADER: zio canide" );
 
-//catch exception
-catch(Exception $e) {
-  echo 'Message: ' .$e->getMessage();
+    $data = array(
+        'name' => 'FRED',
+        'email' => 'john@example.com',
+    );
+    
+    header('Content-Type: application/json');
+    
+    echo json_encode($data);
 }
 
 function post() {
