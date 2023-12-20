@@ -53,10 +53,31 @@ function get() {
 
     header( "CUSTOM_HEADER: zio canide" );
 
-    $data = array(
-        'name' => 'FRED',
-        'email' => 'john@example.com',
-    );
+    $data = array
+    {
+      "notizie_tecnologia":[
+        {
+          'titolo' => 'FRED',
+          'testo' => 'john@example.com',
+          'foto' => 'foto1.jpg',
+        },
+        {
+          'titolo' => 'FRED',
+          'testo' => 'john@example.com',
+          'foto' => 'foto1.jpg',
+        },
+        {
+          'titolo' => 'FRED',
+          'testo' => 'john@example.com',
+          'foto' => 'foto1.jpg',
+        },
+        {
+          'titolo' => 'FRED',
+          'testo' => 'john@example.com',
+          'foto' => 'foto1.jpg',
+        }
+      ]
+    };
     
     header('Content-Type: application/json');
     
