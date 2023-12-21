@@ -33,9 +33,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     echo $json_notizie;
 
 } else {
-    // Se la richiesta non è di tipo GET, restituisci un errore
-    header('HTTP/1.1 405 Method Not Allowed');
-    echo 'Metodo non consentito';
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        echo 'Metodo richiesta è ' + $_SERVER['REQUEST_METHOD'];
+    } else {
+        // Se la richiesta non è di tipo GET, restituisci un errore
+        header('HTTP/1.1 405 Method Not Allowed');
+        echo 'Metodo non consentito';
+    }
 }
 
 ?>
