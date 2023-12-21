@@ -34,6 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
 } else {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        header('HTTP/1.1 200 Method is POST');
         echo 'Metodo richiesta è ' + $_SERVER['REQUEST_METHOD'];
     } else {
         // Se la richiesta non è di tipo GET, restituisci un errore
