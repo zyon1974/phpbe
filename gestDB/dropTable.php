@@ -28,5 +28,7 @@
             echo "\nSpecificare nome tabella da cancellare.";
             echo "\nSTabella non cancellata.";
         }
+    } else  {
+        echo "\requesta method non DEL";
     }
 ?>
