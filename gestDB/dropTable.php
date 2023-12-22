@@ -1,5 +1,5 @@
 <?php
-    if ($_SERVER['REQUEST_METHOD'] === 'DEL') {
+    if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
 
         $tabella = isset($_GET['tabella']) ? $_GET['tabella'] : null;
 
