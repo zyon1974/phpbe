@@ -1,7 +1,7 @@
 <?php
     if ($_SERVER['REQUEST_METHOD'] === 'DEL') {
 
-        $table = GET['tabella'];
+        $tabella = isset($_GET['tabella']) ? $_GET['tabella'] : null;
 
         if($tabella) {
             include("conn.php");
