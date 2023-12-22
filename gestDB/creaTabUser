@@ -1,0 +1,25 @@
+<?php
+    include("conn.php");
+
+    // Creazione della tabella 'user'
+    $sql_create_table = "CREATE TABLE IF NOT EXISTS user (
+        id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        username VARCHAR(30) NOT NULL,
+        pwd VARCHAR(30) NOT NULL,
+        nome VARCHAR(30) NOT NULL,
+        cognome VARCHAR(30) NOT NULL,
+        data_inserimento DATE NOT NULL
+    )";
+
+    try {
+        $conn->exec($sql_create_table);
+        echo "\nTabella 'user' creata con successo";
+    }
+
+    catch (ERROR $e){
+        echo "\nOrrore";
+    }
+
+    // Chiusura della connessione
+    $conn = null;
+?>
