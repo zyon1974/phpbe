@@ -1,5 +1,5 @@
 <?php
-    if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
+    if ($_SERVER['REQUEST_METHOD'] === 'DEL') {
 
         $table = GET['tabella'];
 
