@@ -23,7 +23,7 @@
 
             try {
                 // Nome della tabella da eliminare
-                $table_name = $table;
+                $table_name = $tabella;
 
                 // Query per eliminare la tabella
                 $sql = "DROP TABLE $table_name";
@@ -44,6 +44,6 @@
             echo "\nSTabella non cancellata.";
         }
     } else  {
-        echo "\requesta method non DELETE";
+        echo "\n method non DELETE";
     }
 ?>
